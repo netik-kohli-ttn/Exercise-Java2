@@ -32,19 +32,21 @@ public class User {
         while (flag) {
             System.out.println("Enter firstname: ");
             String fname = sc.nextLine();
+            
             System.out.println("Enter lastname: ");
             String lname = sc.nextLine();
+            
             System.out.println("Enter age: ");
             int age = sc.nextInt();
             System.out.println("Enter phone number: ");
             int phonenumber = sc.nextInt();
+            
             User u = new User(fname, lname, age, phonenumber);
             u.usersave(file);
-
             System.out.println("Do you want to continue creating users? (Type QUIT to exit): ");
 
             String inp = sc.next();
-            if (inp.equalsIgnoreCase("QUIT")) {
+            if (inp.equals("QUIT")) {
                 flag = false;
             }
             sc.nextLine();
